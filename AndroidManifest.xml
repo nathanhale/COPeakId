@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      android:versionCode="1" android:versionName="0.1" package="com.wyeknot.copeakid" android:installLocation="auto">
+
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="9"/>
+
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<uses-feature android:required="false" android:name="android.hardware.camera.autofocus"></uses-feature>
+	<uses-feature android:required="false" android:name="android.hardware.camera.flash"></uses-feature>
+	<uses-feature android:required="false" android:name="android.hardware.camera.front"></uses-feature>
+	
+	<supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true"></supports-screens>
+	<!--  TODO: NH - set name to a string -->
+    <application android:label="CO Peak ID" android:icon="@drawable/ic_launcher" android:name=".CoPeakIdApp">
+        
+    	<uses-library android:name="com.google.android.maps" />
+        
+        <activity android:name="com.wyeknot.ez_mixare.MixView" 
+			android:screenOrientation="landscape"  
+			android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>             
+        </activity>        
+	</application>
+</manifest> 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<group android:id="@+id/mixare_menu_items" android:visible="false">
+	    <!--  TODO: NH - need to add string vals for this menu items! -->
+	    <!-- NOTE! I've used the android drawables here, but you should copy them to your local project -->
+		<item android:title="Set Range" android:id="@+id/mixare_menu_item_set_range" android:icon="@android:drawable/ic_menu_zoom" />
+		<item android:title="GPS Info" android:id="@+id/mixare_menu_item_gps_info" android:icon="@android:drawable/ic_menu_info_details"/>
+		<item android:title="Show Hidden Markers" android:id="@+id/mixare_menu_item_show_hidden_markers" android:icon="@android:drawable/ic_menu_revert" />
+	</group>
+</menu>
