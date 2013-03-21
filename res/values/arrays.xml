@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="elevation_ranges">
+        <item>@string/elev_range_14ers</item>
+        <item>@string/elev_range_centennials</item>
+        <item>@string/elev_range_bicentennials</item>
+        <item>@string/elev_range_low_13ers</item>
+    </array>
+</resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>	
-	<string name="license">Copyright &#169; 2010- Peer internet solutions 
+	<string name="license">Copyright &#169; 2010- Peer internet solutions
+	    \n\nModified 2012- Nathan Hale, Wyeknot Software
 		\n\nThis program is free software: 	you can redistribute it and/or modify it under the terms of the 
 		GNU General Public License as published by the Free Software Foundation, either version 3 of the License, 
 		or at your option) any later version. 
@@ -10,6 +11,20 @@
 		\n\n You should have received a copy of the GNU General Public License along with this program. 
 		If not, see &lt;http://www.gnu.org/licenses/&gt;
 	</string>
-
-	
+	<string name="menu_item_set_range">Set Range</string>
+	<string name="menu_item_show_hidden_markers">Show Hidden Markers</string>
+	<string name="menu_item_gps_info">GPS Info</string>
+	<string name="menu_item_elev_range">Peaks to Display</string>
+	<string name="menu_item_help_text">Help</string>
+	<string name="menu_item_license_text">License</string>
+	<string name="dialog_okay_button_text">Okay!</string>
+	<string name="dialog_help_button_text">Help</string>
+	<string name="dialog_license_button_text">License</string>
+	<string name="dialog_dont_show_in_future_text">Got it! Don\'t show this again</string>
+	<string name="dialog_startup_text">Thanks for downloading the Colorado Peak Id app!\n\nAs with all augmented reality apps, this app is only as good as the GPS, compass, and gyrometers on your phone, so how well this works depends on what hardware you have and how it is calibrated. For much more information, please view the help screen.\n\nAdditionally, you should know that this is free software available under the GNU Public License, the terms of which can be seen by clicking the &quot;License&quot; button below or accessed via the menu. The source code is available at http://www.github.com/nathanhale/COPeakId</string>
+	<string name="elev_range_14ers">Fourteeners</string>
+	<string name="elev_range_centennials">Centennial 13ers</string>
+	<string name="elev_range_bicentennials">Bicentennial 13ers</string>
+	<string name="elev_range_low_13ers">All Other 13ers</string>
+	<string name="select_elev_range_dialog_title">Select Peaks to Display</string>
 </resources>

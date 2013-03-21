@@ -19,15 +19,15 @@
  */
 package com.wyeknot.ez_mixare.gui;
 
-import com.wyeknot.ez_mixare.GenericMixUtils;
+import android.location.Location;
+
+import com.wyeknot.ez_mixare.CustomUtils;
 import com.wyeknot.ez_mixare.Marker;
 import com.wyeknot.ez_mixare.MixConstants;
 import com.wyeknot.ez_mixare.MixContext;
 import com.wyeknot.ez_mixare.MixState;
 import com.wyeknot.ez_mixare.data.DataHandler;
 import com.wyeknot.ez_mixare.render.CameraCalculator;
-
-import android.location.Location;
 
 
 /**
@@ -195,7 +195,7 @@ public class DataPainter {
 		dw.paintLine( rightRadarLine.x, rightRadarLine.y, radarXPos + Radar.RADIUS, radarYPos + Radar.RADIUS);
 		
 		//Paint the text indicating the current range
-		String rangeText = GenericMixUtils.formatDist(mixContext.getRange());
+		String rangeText = CustomUtils.formatDist(mixContext.getRange());
 
 		dw.setFontSize(14); //Must be set before the width and height are calculated
 		
@@ -209,7 +209,7 @@ public class DataPainter {
 		if (dataHandler.needsLocationUpdate()) {
 			Location location = mixContext.getCurrentLocation(); 
 			if (null != location) {
-				dataHandler.onLocationChanged(location);
+				dataHandler.onLocationChanged(location, mixContext);
 				dataHandler.setLocationUpdateNeeded(false);
 			}
 		}
@@ -217,7 +217,13 @@ public class DataPainter {
 		for (int i = dataHandler.getMarkerCount() - 1 ; i >= 0 ; i--) {
 			Marker marker = dataHandler.getMarker(i);
 			
-			if (marker.isActive() && (marker.getDistance() < mixContext.getRange())) {
+			/* I'm changing the active state based on elevation here, but it would be better
+			 * to do in DataHandler, I just can't think of a clean way to do it. If this is
+			 * too slow then I'll have to do it the dirty way
+			 */
+			if (marker.isActive() &&
+					(marker.getDistance() < mixContext.getRange()) &&
+					mixContext.shouldBeDisplayedByElevation(marker)) {
 				//TODO:
 				// To increase performance don't recalculate position vector
 				// for every marker on every draw call, instead do this only 

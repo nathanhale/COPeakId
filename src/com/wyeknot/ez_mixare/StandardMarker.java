@@ -25,6 +25,7 @@ public class StandardMarker extends Marker {
 
 	public static final int MAX_OBJECTS = MixConstants.standardMarkerMaxObjects;
 
+	//Altitude is in meters
 	public StandardMarker(String key, String title, double latitude, double longitude, double altitude, ClickHandler h) {
 		super(key, title, latitude, longitude, altitude, h);
 	}
@@ -72,7 +73,7 @@ public class StandardMarker extends Marker {
 	
 	@Override
 	public String getDistanceString() {
-		return "\nElev: " + GenericMixUtils.formatElevation(realAltitude) +
-				"\n(" + GenericMixUtils.formatDist((float)distance) + " away)";
+		return "\nElev: " + CustomUtils.formatElevation(realAltitude) +
+				"\n(" + CustomUtils.formatDist((float)distance) + " away)";
 	}
 }

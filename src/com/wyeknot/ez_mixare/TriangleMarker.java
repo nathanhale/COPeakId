@@ -53,8 +53,8 @@ public class TriangleMarker extends Marker {
 	
 	@Override
 	public String getDistanceString() {
-		return "\nElev: " + GenericMixUtils.formatElevation(realAltitude) +
-				"\n(" + GenericMixUtils.formatDist((float)distance) + " away)";
+		return "\nElev: " + CustomUtils.formatElevation(realAltitude) +
+				"\n(" + CustomUtils.formatDist((float)distance) + " away)";
 	}
 	
 	@Override

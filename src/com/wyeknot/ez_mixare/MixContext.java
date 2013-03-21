@@ -20,14 +20,14 @@
  */
 package com.wyeknot.ez_mixare;
 
+import android.app.Activity;
+import android.content.ContextWrapper;
+import android.location.Location;
+
+import com.wyeknot.copeakid.CoPeakIdApp;
 import com.wyeknot.ez_mixare.data.DataHandler;
 import com.wyeknot.ez_mixare.reality.LocationHandler;
 import com.wyeknot.ez_mixare.render.Matrix;
-
-import android.content.Context;
-import android.content.ContextWrapper;
-import android.content.SharedPreferences;
-import android.location.Location;
 
 /**
  * This class is intended to be a global repository of data for our AR activity.
@@ -42,7 +42,7 @@ public class MixContext extends ContextWrapper {
 	/** in meters */
 	public static final int MAXIMUM_RANGE = MixConstants.rangeSetterMaximum; 
 
-	public Context context;
+	public Activity context;
 
 	private Matrix rotationM = new Matrix();
 	public float declination = 0f;
@@ -50,6 +50,7 @@ public class MixContext extends ContextWrapper {
 	private Location currentLocation;
 	
 	private DataHandler dataHandler;
+
 	
 	/* For updating our augmentedView when either the location
 	 * or orientation of the device changes.
@@ -59,58 +60,69 @@ public class MixContext extends ContextWrapper {
 	 */
 	private DevicePositionChangedListener listener;
 
-	/** in meters */
-	private double range = MixConstants.defaultRange; //This is the default, the current val will be read from preferences
 	
-	public MixContext(Context ctx, DevicePositionChangedListener l) {
+	public MixContext(Activity ctx, DevicePositionChangedListener l) {
 		super(ctx);
 
 		localInit(ctx, null, l);
 	}
 	
-	public MixContext(Context ctx, DataHandler h, DevicePositionChangedListener l) {
+	public MixContext(Activity ctx, DataHandler h, DevicePositionChangedListener l) {
 		super(ctx);
 		
 		localInit(ctx, h, l);
 	}
 	
-	private void localInit(Context ctx, DataHandler h, DevicePositionChangedListener l) {
+	private void localInit(Activity ctx, DataHandler h, DevicePositionChangedListener l) {
 		context = ctx;		
 		rotationM.toIdentity();
-
-		//Make sure to call this before calling anything that could potentially need it
-		getRangeFromPrefs();
 		
 		setDataHandler(h);
 
 		listener = l;
 	}
 	
-	private void getRangeFromPrefs() {
-		SharedPreferences settings = context.getSharedPreferences(MixConstants.mixarePreferencesFile, 0);
-		float newRange = settings.getFloat(MixConstants.mixareRangeItemName, (float)range);	
-		range = (double)newRange;
-	}	
 
 	public void setDataHandler(DataHandler h) {
 		dataHandler = h;
 		dataHandler.setContext(context);
 	}
-	
-	public void setRange(double r) {
-		range = r;
 
-		SharedPreferences settings = context.getSharedPreferences(MixConstants.mixarePreferencesFile, 0);
-		SharedPreferences.Editor editor = settings.edit();
-		/* store the zoom range of the zoom bar selected by the user */
-		editor.putFloat(MixConstants.mixareRangeItemName, (float)r);
-		editor.commit();
+	
+	public CoPeakIdApp.PeaksToShow getElevationsToDisplay() {
+		return ((CoPeakIdApp)context.getApplication()).getElevationsToDisplay();
+	}
+
+	public void setElevationsToDisplay(CoPeakIdApp.PeaksToShow elevationsToDisplay) {		
+		((CoPeakIdApp)context.getApplication()).setElevationsToDisplay(elevationsToDisplay);
+		dataHandler.updateActivationStatus(this);
 	}
 	
 	public double getRange() {
-		return range;
+		return ((CoPeakIdApp)context.getApplication()).getRange();
 	}
-
+	
+	public void setRange(double range) {
+		((CoPeakIdApp)context.getApplication()).setRange(range);
+	}
+	
+	public boolean shouldBeDisplayedByElevation(Marker marker) {
+		if (marker.getRealAltitude() > CoPeakIdApp.PeaksToShow.elevCutoff14ers) {
+			//System.out.println("Got marker " + marker.title + " with elevation " + marker.realAltitude);
+			//System.out.println("And elevationsToDisplay.show14ers is " + elevationsToDisplay.show14ers);
+			return getElevationsToDisplay().show14ers;
+		}
+		else if (marker.getRealAltitude() > CoPeakIdApp.PeaksToShow.elevCutoffCentennials) {
+			return getElevationsToDisplay().showCentennials;
+		}
+		else if (marker.getRealAltitude() > CoPeakIdApp.PeaksToShow.elevCutoffBiCentennials) {
+			return getElevationsToDisplay().showBiCentennials;
+		}
+		else {
+			return getElevationsToDisplay().showLow13ers;
+		}
+	}
+	
 	public void getRotationMatrix(Matrix dest) {
 		synchronized (rotationM) {
 			dest.set(rotationM);
@@ -145,7 +157,7 @@ public class MixContext extends ContextWrapper {
 			}
 		}
 
-		dataHandler.onLocationChanged(l);
+		dataHandler.onLocationChanged(l, this);
 	}
 
 	public boolean isCurrentLocationAccurateEnough() {
@@ -175,7 +187,7 @@ public class MixContext extends ContextWrapper {
 
 	public void resetUserActiveState() {
 		dataHandler.resetUserActiveForAllMarkers();
-		dataHandler.updateActivationStatus();
+		dataHandler.updateActivationStatus(this);
 	}
 	
 	public static abstract class DevicePositionChangedListener {

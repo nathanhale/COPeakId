@@ -92,6 +92,7 @@ abstract public class Marker implements Comparable<Marker> {
 	 */
 	private Context markerContext; 
 	
+	//Altitude is in meters
 	public Marker(String key, String title, double latitude, double longitude, double altitude, ClickHandler h) {
 		super();
 

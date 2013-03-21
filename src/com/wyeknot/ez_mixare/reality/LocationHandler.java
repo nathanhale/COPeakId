@@ -82,7 +82,7 @@ public class LocationHandler {
 		//thanks Reto Meier for his presentation at gddde 2010
 		
 		//TODO: add a preference for this -- allows the user to decide, e.g. if they're in a car
-		long locationMinimumUpdateFrequency = 60000;	     //60 seconds
+		long locationMinimumUpdateFrequency = 0;	     //Always update
 		float locationMinumumMovementDistanceForUpdate = 15; //in meters
 		
 		try {

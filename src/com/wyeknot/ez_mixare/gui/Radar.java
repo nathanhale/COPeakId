@@ -66,7 +66,7 @@ public class Radar implements ScreenObj {
 			float x = m.getLocationVector().x / scale;
 			float y = m.getLocationVector().z / scale;
 
-			if (m.isActive() && (x * x + y * y < RADIUS * RADIUS)) {
+			if (m.isActive() && (x * x + y * y < RADIUS * RADIUS) && mixContext.shouldBeDisplayedByElevation(m)) {
 				dw.setFill(true);
 				dw.setColor(m.getMarkerRadarColor());
 				dw.paintRect(x + RADIUS - 1, y + RADIUS - 1, 2, 2);

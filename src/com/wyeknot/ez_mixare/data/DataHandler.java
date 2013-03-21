@@ -26,15 +26,17 @@ import java.util.Collections;
 import java.util.Hashtable;
 import java.util.List;
 
-import com.wyeknot.ez_mixare.Marker;
-
 import android.content.Context;
 import android.location.Location;
+
+import com.wyeknot.ez_mixare.Marker;
+import com.wyeknot.ez_mixare.MixContext;
 
 /**
  * DataHandler is the model which provides the Marker Objects with their data.
  */
 public class DataHandler {
+	
 	
 	// complete marker list
 	private List<Marker> markerList = new ArrayList<Marker>();
@@ -92,7 +94,8 @@ public class DataHandler {
 		}
 	}
 	
-	public void updateActivationStatus() {
+	
+	public void updateActivationStatus(MixContext mixContext) {
 		
 		Hashtable<Class<? extends Marker>, Integer> map = new Hashtable<Class<? extends Marker>, Integer>();
 				
@@ -104,14 +107,15 @@ public class DataHandler {
 		 * closest ones are going to be the active ones.
 		 */
 		for (Marker marker : markerList) {
-			if (marker.isUserActive()) {
+
+			if (marker.isUserActive() && mixContext.shouldBeDisplayedByElevation(marker)) {
 				Class<? extends Marker> mClass = marker.getClass();
 				//Increment the number of instances of this type of marker
 				map.put(mClass, (map.containsKey(mClass)) ? (map.get(mClass) + 1) : 1);
 
 				//See if this marker should be active or not
 				boolean belowMax = (map.get(mClass) <= marker.getMaxObjects());
-
+				
 				//Set the marker to be either active or not
 				marker.setActive(belowMax);
 			}
@@ -127,13 +131,13 @@ public class DataHandler {
 		}
 	}
 
-	public void onLocationChanged(Location location) {
+	public void onLocationChanged(Location location, MixContext mixContext) {
 		//Must update distances before sorting because the sort is on the distances
 		updateDistances(location);
 		
 		sortMarkerList();
 		
-		updateActivationStatus();
+		updateActivationStatus(mixContext);
 
 		for(Marker marker : markerList) {
 			marker.updateRelativeLocation(location);

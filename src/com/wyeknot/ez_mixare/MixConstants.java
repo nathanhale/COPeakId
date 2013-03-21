@@ -21,6 +21,8 @@ package com.wyeknot.ez_mixare;
 
 import android.graphics.Color;
 
+import com.wyeknot.copeakid.CoPeakIdApp;
+
 public class MixConstants {
 	public static final int standardMarkerLabelOutlineStrokeWidth = 2;
 	public static final int standardMarkerLabelMaximumWidth = 300;
@@ -29,7 +31,9 @@ public class MixConstants {
 	public static final int standardMarkerColorChangeThresholdDistance = 1000;
     
     /** in meters - this is about 5 miles */
-	public static final int defaultRange = 8050;   
+	public static final int defaultRange = 8050;  
+
+	public static final CoPeakIdApp.PeaksToShow defaultElevationsToDisplay = new CoPeakIdApp.PeaksToShow();
     
 	/** in seconds - this is 2 hours */
 	public static final long staleLocationCutoffTime = 7200;

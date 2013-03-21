@@ -19,34 +19,18 @@
  */
 package com.wyeknot.ez_mixare;
 
+import android.util.FloatMath;
+
 /**
  * This class has the ability to calculate the declination of a line between two
- * points. It is able to check if a point is in a given rectangle and it also can
- * make a String out of a given distance-value which contains number and unit.
+ * points. It is able to check if a point is in a given rectangle.
+ * 
  */
 public class MixUtils {
+	
 	public static String parseAction(String action) {
 		return (action.substring(action.indexOf(':') + 1, action.length()))
 				.trim();
-	}
-
-	public static String formatDist(double distanceInMeters) {
-		if (distanceInMeters < 1000) {
-			return ((int) distanceInMeters) + "m";
-		} else if (distanceInMeters < 10000) {
-			return formatDec(distanceInMeters / 1000f, 1) + "km";
-		} else {
-			return ((int) (distanceInMeters / 1000f)) + "km";
-		}
-	}
-
-	static String formatDec(double val, int dec) {
-		int factor = (int) Math.pow(10, dec);
-
-		int front = (int) (val );
-		int back = (int) Math.abs(val * (factor) ) % factor;
-
-		return front + "." + back;
 	}
 
 	public static boolean pointInside(float P_x, float P_y, float r_x,
@@ -58,7 +42,7 @@ public class MixUtils {
 			float post_y) {
 		float tmpv_x = post_x - center_x;
 		float tmpv_y = post_y - center_y;
-		float d = (float) Math.sqrt(tmpv_x * tmpv_x + tmpv_y * tmpv_y);
+		float d = FloatMath.sqrt(tmpv_x * tmpv_x + tmpv_y * tmpv_y);
 		float cos = tmpv_x / d;
 		float angle = (float) Math.toDegrees(Math.acos(cos));
 
