@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peaks ver="1">
+ <peak>
+  <pkey>141410</pkey>
+  <pname_full>Mt. Elbert</pname_full>
+  <pelev>14433</pelev>
+  <plat>39.118075</plat>
+  <plon>-106.445417</plon>
+ </peak>
+ <peak>
+  <pkey>141420</pkey>
+  <pname_full>Mt. Massive</pname_full>
+  <pelev>14421</pelev>
+  <plat>39.187298</plat>
+  <plon>-106.475548</plon>
+ </peak>
+ <peak>
+  <pkey>141430</pkey>
+  <pname_full>Mt. Harvard</pname_full>
+  <pelev>14420</pelev>
+  <plat>38.924328</plat>
+  <plon>-106.320618</plon>
+ </peak>
+ <peak>
+  <pkey>141440</pkey>
+  <pname_full>Blanca Peak</pname_full>
+  <pelev>14345</pelev>
+  <plat>37.577473</plat>
+  <plon>-105.485443</plon>
+ </peak>
+ <peak>
+  <pkey>141460</pkey>
+  <pname_full>La Plata Peak</pname_full>
+  <pelev>14336</pelev>
+  <plat>39.029251</plat>
+  <plon>-106.473145</plon>
+ </peak>
+ <peak>
+  <pkey>141470</pkey>
+  <pname_full>Uncompahgre Peak</pname_full>
+  <pelev>14309</pelev>
+  <plat>38.071507</plat>
+  <plon>-107.462166</plon>
+ </peak>
+ <peak>
+  <pkey>141490</pkey>
+  <pname_full>Crestone Peak</pname_full>
+  <pelev>14294</pelev>
+  <plat>37.966972</plat>
+  <plon>-105.585304</plon>
+ </peak>
+ <peak>
+  <pkey>1414100</pkey>
+  <pname_full>Mt. Lincoln</pname_full>
+  <pelev>14286</pelev>
+  <plat>39.351391</plat>
+  <plon>-106.111404</plon>
+ </peak>
+ <peak>
+  <pkey>1414110</pkey>
+  <pname_full>Grays Peak</pname_full>
+  <pelev>14270</pelev>
+  <plat>39.633820</plat>
+  <plon>-105.817520</plon>
+ </peak>
+ <peak>
+  <pkey>1414120</pkey>
+  <pname_full>Mt. Antero</pname_full>
+  <pelev>14269</pelev>
+  <plat>38.674088</plat>
+  <plon>-106.246201</plon>
+ </peak>
+ <peak>
+  <pkey>1414130</pkey>
+  <pname_full>Torreys Peak</pname_full>
+  <pelev>14267</pelev>
+  <plat>39.642742</plat>
+  <plon>-105.821259</plon>
+ </peak>
+ <peak>
+  <pkey>1414150</pkey>
+  <pname_full>Castle Peak</pname_full>
+  <pelev>14265</pelev>
+  <plat>39.009647</plat>
+  <plon>-106.86144</plon>
+ </peak>
+ <peak>
+  <pkey>1414140</pkey>
+  <pname_full>Quandary Peak</pname_full>
+  <pelev>14265</pelev>
+  <plat>39.397236</plat>
+  <plon>-106.106430</plon>
+ </peak>
+ <peak>
+  <pkey>1414160</pkey>
+  <pname_full>Mt. Evans</pname_full>
+  <pelev>14264</pelev>
+  <plat>39.588360</plat>
+  <plon>-105.643333</plon>
+ </peak>
+ <peak>
+  <pkey>1414200</pkey>
+  <pname_full>Longs Peak</pname_full>
+  <pelev>14255</pelev>
+  <plat>40.254902</plat>
+  <plon>-105.615738</plon>
+ </peak>
+ <peak>
+  <pkey>1414210</pkey>
+  <pname_full>Mt. Wilson</pname_full>
+  <pelev>14246</pelev>
+  <plat>37.839310</plat>
+  <plon>-107.991570</plon>
+ </peak>
+ <peak>
+  <pkey>1414220</pkey>
+  <pname_full>Mt. Cameron</pname_full>
+  <pelev>14238</pelev>
+  <plat>39.346844</plat>
+  <plon>-106.118576</plon>
+ </peak>
+ <peak>
+  <pkey>1414230</pkey>
+  <pname_full>Mt. Shavano</pname_full>
+  <pelev>14229</pelev>
+  <plat>38.619083</plat>
+  <plon>-106.239296</plon>
+ </peak>
+ <peak>
+  <pkey>1414260</pkey>
+  <pname_full>Mt. Belford</pname_full>
+  <pelev>14197</pelev>
+  <plat>38.960575</plat>
+  <plon>-106.360832</plon>
+ </peak>
+ <peak>
+  <pkey>1414250</pkey>
+  <pname_full>Crestone Needle</pname_full>
+  <pelev>14197</pelev>
+  <plat>37.964737</plat>
+  <plon>-105.576683</plon>
+ </peak>
+ <peak>
+  <pkey>1414240</pkey>
+  <pname_full>Mt. Princeton</pname_full>
+  <pelev>14197</pelev>
+  <plat>38.749062</plat>
+  <plon>-106.242432</plon>
+ </peak>
+ <peak>
+  <pkey>1414270</pkey>
+  <pname_full>Mt. Yale</pname_full>
+  <pelev>14196</pelev>
+  <plat>38.844051</plat>
+  <plon>-106.313965</plon>
+ </peak>
+ <peak>
+  <pkey>1414290</pkey>
+  <pname_full>Mt. Bross</pname_full>
+  <pelev>14172</pelev>
+  <plat>39.335060</plat>
+  <plon>-106.107376</plon>
+ </peak>
+ <peak>
+  <pkey>1414300</pkey>
+  <pname_full>Kit Carson Peak</pname_full>
+  <pelev>14165</pelev>
+  <plat>37.979759</plat>
+  <plon>-105.602562</plon>
+ </peak>
+ <peak>
+  <pkey>1414310</pkey>
+  <pname_full>El Diente Peak</pname_full>
+  <pelev>14159</pelev>
+  <plat>37.839275</plat>
+  <plon>-108.005219</plon>
+ </peak>
+ <peak>
+  <pkey>1414320</pkey>
+  <pname_full>Maroon Peak</pname_full>
+  <pelev>14156</pelev>
+  <plat>39.070713</plat>
+  <plon>-106.989113</plon>
+ </peak>
+ <peak>
+  <pkey>1414330</pkey>
+  <pname_full>Tabeguache Peak</pname_full>
+  <pelev>14155</pelev>
+  <plat>38.625622</plat>
+  <plon>-106.250710</plon>
+ </peak>
+ <peak>
+  <pkey>1414340</pkey>
+  <pname_full>Mt. Oxford</pname_full>
+  <pelev>14153</pelev>
+  <plat>38.964680</plat>
+  <plon>-106.338432</plon>
+ </peak>
+ <peak>
+  <pkey>1414350</pkey>
+  <pname_full>Mt. Sneffels</pname_full>
+  <pelev>14150</pelev>
+  <plat>38.003605</plat>
+  <plon>-107.792229</plon>
+ </peak>
+ <peak>
+  <pkey>1414360</pkey>
+  <pname_full>Mt. Democrat</pname_full>
+  <pelev>14148</pelev>
+  <plat>39.339542</plat>
+  <plon>-106.139946</plon>
+ </peak>
+ <peak>
+  <pkey>1414390</pkey>
+  <pname_full>Capitol Peak</pname_full>
+  <pelev>14130</pelev>
+  <plat>39.150166</plat>
+  <plon>-107.083221</plon>
+ </peak>
+ <peak>
+  <pkey>1414400</pkey>
+  <pname_full>Pikes Peak</pname_full>
+  <pelev>14110</pelev>
+  <plat>38.840542</plat>
+  <plon>-105.044357</plon>
+ </peak>
+ <peak>
+  <pkey>1414430</pkey>
+  <pname_full>Snowmass Mountain</pname_full>
+  <pelev>14092</pelev>
+  <plat>39.118809</plat>
+  <plon>-107.066528</plon>
+ </peak>
+ <peak>
+  <pkey>1414440</pkey>
+  <pname_full>Mt. Eolus</pname_full>
+  <pelev>14083</pelev>
+  <plat>37.621948</plat>
+  <plon>-107.622498</plon>
+ </peak>
+ <peak>
+  <pkey>1414450</pkey>
+  <pname_full>Windom Peak</pname_full>
+  <pelev>14082</pelev>
+  <plat>37.621235</plat>
+  <plon>-107.591774</plon>
+ </peak>
+ <peak>
+  <pkey>1414460</pkey>
+  <pname_full>Challenger Point</pname_full>
+  <pelev>14081</pelev>
+  <plat>37.980267</plat>
+  <plon>-105.606766</plon>
+ </peak>
+ <peak>
+  <pkey>1414470</pkey>
+  <pname_full>Mt. Columbia</pname_full>
+  <pelev>14073</pelev>
+  <plat>38.903957</plat>
+  <plon>-106.297485</plon>
+ </peak>
+ <peak>
+  <pkey>1414480</pkey>
+  <pname_full>Missouri Mountain</pname_full>
+  <pelev>14067</pelev>
+  <plat>38.947559</plat>
+  <plon>-106.378471</plon>
+ </peak>
+ <peak>
+  <pkey>1414490</pkey>
+  <pname_full>Humboldt Peak</pname_full>
+  <pelev>14064</pelev>
+  <plat>37.976105</plat>
+  <plon>-105.555351</plon>
+ </peak>
+ <peak>
+  <pkey>1414500</pkey>
+  <pname_full>Mt. Bierstadt</pname_full>
+  <pelev>14060</pelev>
+  <plat>39.582638</plat>
+  <plon>-105.668610</plon>
+ </peak>
+ <peak>
+  <pkey>1414510</pkey>
+  <pname_full>Conundrum Peak</pname_full>
+  <pelev>14060</pelev>
+  <plat>39.01514</plat>
+  <plon>-106.863281</plon>
+ </peak>
+ <peak>
+  <pkey>1414530</pkey>
+  <pname_full>Sunlight Peak</pname_full>
+  <pelev>14059</pelev>
+  <plat>37.627285</plat>
+  <plon>-107.595894</plon>
+ </peak>
+ <peak>
+  <pkey>1414540</pkey>
+  <pname_full>Handies Peak</pname_full>
+  <pelev>14048</pelev>
+  <plat>37.913021</plat>
+  <plon>-107.504478</plon>
+ </peak>
+ <peak>
+  <pkey>1414550</pkey>
+  <pname_full>Culebra Peak</pname_full>
+  <pelev>14047</pelev>
+  <plat>37.122173</plat>
+  <plon>-105.185593</plon>
+ </peak>
+ <peak>
+  <pkey>1414560</pkey>
+  <pname_full>Ellingwood Point</pname_full>
+  <pelev>14042</pelev>
+  <plat>37.582508</plat>
+  <plon>-105.492569</plon>
+ </peak>
+ <peak>
+  <pkey>1414570</pkey>
+  <pname_full>Mt. Lindsey</pname_full>
+  <pelev>14042</pelev>
+  <plat>37.583801</plat>
+  <plon>-105.444763</plon>
+ </peak>
+ <peak>
+  <pkey>1414580</pkey>
+  <pname_full>North Eolus</pname_full>
+  <pelev>14039</pelev>
+  <plat>37.625416</plat>
+  <plon>-107.620995</plon>
+ </peak>
+ <peak>
+  <pkey>1414590</pkey>
+  <pname_full>Little Bear Peak</pname_full>
+  <pelev>14037</pelev>
+  <plat>37.566624</plat>
+  <plon>-105.497162</plon>
+ </peak>
+ <peak>
+  <pkey>1414600</pkey>
+  <pname_full>Mt. Sherman</pname_full>
+  <pelev>14036</pelev>
+  <plat>39.225006</plat>
+  <plon>-106.169945</plon>
+ </peak>
+ <peak>
+  <pkey>1414610</pkey>
+  <pname_full>Redcloud Peak</pname_full>
+  <pelev>14034</pelev>
+  <plat>37.940880</plat>
+  <plon>-107.421654</plon>
+ </peak>
+ <peak>
+  <pkey>1414660</pkey>
+  <pname_full>Pyramid Peak</pname_full>
+  <pelev>14018</pelev>
+  <plat>39.071545</plat>
+  <plon>-106.950188</plon>
+ </peak>
+ <peak>
+  <pkey>1414670</pkey>
+  <pname_full>Wilson Peak</pname_full>
+  <pelev>14017</pelev>
+  <plat>37.859913</plat>
+  <plon>-107.984795</plon>
+ </peak>
+ <peak>
+  <pkey>1414680</pkey>
+  <pname_full>Wetterhorn Peak</pname_full>
+  <pelev>14015</pelev>
+  <plat>38.060593</plat>
+  <plon>-107.510834</plon>
+ </peak>
+ <peak>
+  <pkey>1414690</pkey>
+  <pname_full>San Luis Peak</pname_full>
+  <pelev>14014</pelev>
+  <plat>37.986897</plat>
+  <plon>-106.931389</plon>
+ </peak>
+ <peak>
+  <pkey>1414700</pkey>
+  <pname_full>North Maroon Peak</pname_full>
+  <pelev>14014</pelev>
+  <plat>39.076077</plat>
+  <plon>-106.987267</plon>
+ </peak>
+ <peak>
+  <pkey>1414710</pkey>
+  <pname_full>Mt. of the Holy Cross</pname_full>
+  <pelev>14005</pelev>
+  <plat>39.466713</plat>
+  <plon>-106.481766</plon>
+ </peak>
+ <peak>
+  <pkey>1414720</pkey>
+  <pname_full>Huron Peak</pname_full>
+  <pelev>14003</pelev>
+  <plat>38.945423</plat>
+  <plon>-106.438126</plon>
+ </peak>
+ <peak>
+  <pkey>1414730</pkey>
+  <pname_full>Sunshine Peak</pname_full>
+  <pelev>14001</pelev>
+  <plat>37.922604</plat>
+  <plon>-107.425606</plon>
+ </peak>
+</peaks>
